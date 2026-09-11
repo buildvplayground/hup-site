@@ -7,7 +7,7 @@
   "etapas": [
     { "n": 1, "nome": "extrair-drive", "status": "done" },
     { "n": 2, "nome": "scaffold-projeto", "status": "done" },
-    { "n": 2.5, "nome": "repo-github", "status": "doing" },
+    { "n": 2.5, "nome": "repo-github", "status": "done" },
     { "n": 3, "nome": "design-system", "status": "done" },
     { "n": 4, "nome": "extrair-copy", "status": "done" },
     { "n": 5, "nome": "gerar-frontend", "status": "done" },
@@ -41,7 +41,7 @@
     { "item": "WhatsApp comercial", "status": "resolvido", "obs": "5511993353728 do deck, ja configurado" },
     { "item": "IDs de tag (GTM/GA4/Meta Pixel)", "status": "pendente", "acao": "cliente fornece os IDs; rodar instalar-tags" },
     { "item": "Merlin (popup)", "status": "pendente", "acao": "so se o cliente quiser; precisa de ID" },
-    { "item": "Repositorio GitHub", "status": "verificar", "acao": "confirmar criacao dev-buildv/hup-site (privado)" },
+    { "item": "Repositorio GitHub", "status": "resolvido", "obs": "dev-buildv/hup-site (privado) criado e com push" },
     { "item": "Deploy Vercel", "status": "pendente", "acao": "importar repo, Root Directory=deploy-vercel, Framework=Other" },
     { "item": "Deploy WordPress", "status": "pendente", "acao": "zipar deploy-wordpress/hup-site e enviar como tema; criar Page Privacidade" },
     { "item": "Dominio", "status": "pendente", "acao": "cliente define dominio/apontamento DNS" },
