@@ -17,8 +17,8 @@
   --muted:#5C6A62;                                         /* secundário no papel (5.4:1) */
   --muted-2:#8A968F;
   --cream:#EAF1EC;                                         /* texto sobre grafite */
-  --disp:"Funnel Display","Funnel Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --sans:"Funnel Sans","Funnel Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --disp:"Raleway",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --sans:"Krub",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
   --container:1280px;
   --pad:clamp(20px,4.5vw,56px);
