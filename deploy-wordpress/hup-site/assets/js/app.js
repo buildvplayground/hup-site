@@ -30,7 +30,7 @@
       document.querySelectorAll('[data-hero-h], .chapter h2, .break h2').forEach(function (h) {
         if (h.dataset.split) return;
         var ok = true;
-        h.childNodes.forEach(function (n) { if (n.nodeType === 1 && !n.classList.contains('oc')) ok = false; });
+        h.childNodes.forEach(function (n) { if (n.nodeType === 1 && !n.classList.contains('gr') && !n.classList.contains('oc')) ok = false; });
         if (!ok) return;
         h.dataset.split = '1';
         var frag = document.createDocumentFragment();

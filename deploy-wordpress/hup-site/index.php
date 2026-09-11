@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HUP · Governança de Investimentos Imobiliários</title>
 <meta name="description" content="A HUP protege o capital investido no seu projeto e obra. Governança independente de investimentos imobiliários: viabilidade, concorrência e gestão de obra com transparência e controle.">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#F2F5F2">
 <link rel="canonical" href="https://www.hupxp.com/">
 <meta property="og:title" content="HUP · Governança de Investimentos Imobiliários">
 <meta property="og:description" content="Não somos construtora nem escritório de arquitetura. Atuamos em nome de quem investe, do planejamento à entrega das chaves.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700&family=Funnel+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/css/styles.css">
 <?php wp_head(); ?>
 </head>
@@ -25,7 +25,8 @@
 <header class="site-header" data-solid="false">
   <div class="container bar">
     <a class="brand" href="#top" aria-label="HUP, página inicial">
-      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-hup-ink.png" alt="HUP">
+      <img class="li" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-hup-ink.png" alt="HUP">
+      <img class="lw" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/logo-hup-white.png" alt="HUP">
       <span class="tag">Governança de<br>investimentos imobiliários</span>
     </a>
     <nav class="nav nav-links" aria-label="Principal">
@@ -35,7 +36,7 @@
       <a href="#portfolio"><span class="no">04</span>Portfólio<span class="u"></span></a>
       <a href="#lideranca"><span class="no">05</span>Liderança<span class="u"></span></a>
     </nav>
-    <a class="btn header-cta" data-wa-btn="Header" href="#contato" style="padding:11px 22px"><span>Falar com a HUP</span><span class="arw" aria-hidden="true">→</span></a>
+    <a class="btn header-cta" data-wa-btn="Header" href="#contato" style="padding:11px 22px"><span>Falar com a HUP</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></a>
     <button class="burger" aria-label="Abrir menu" aria-expanded="false" data-burger><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -57,7 +58,7 @@
       <a href="#contato" data-drawer-link><span class="no">06</span>Contato</a>
     </nav>
     <div class="d-foot">
-      <a class="btn" data-wa-btn="Menu" href="#contato"><span>Falar com a HUP</span><span class="arw" aria-hidden="true">→</span></a>
+      <a class="btn" data-wa-btn="Menu" href="#contato"><span>Falar com a HUP</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></a>
       <div class="contact">+55 11 99335&#8209;3728<br>www.hupxp.com<br>@hupgestao</div>
     </div>
   </div>
@@ -65,25 +66,25 @@
 
 <span id="top"></span>
 
-<!-- ============ HERO (split claro, parallax) ============ -->
-<section class="hero-wrap" data-bg="light">
+<!-- ============ HERO (full-bleed, parallax) ============ -->
+<section class="hero-wrap" data-bg="dark">
   <div class="hero" data-parallax-scene>
-    <div class="left">
-      <p class="eyebrow kick" data-reveal="soft"><span class="rule"></span>Governança de investimentos imobiliários</p>
-      <h1 class="disp d1" data-hero-h>Protegemos o <span class="gr">capital</span> do seu projeto e obra.</h1>
+    <div class="media"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero.webp" alt="Residência de alto padrão ao entardecer, obra acompanhada pela HUP" data-parallax="0.09" fetchpriority="high"></div>
+    <div class="veil" aria-hidden="true"></div>
+    <div class="chev" aria-hidden="true"></div>
+    <div class="container inner">
+      <p class="eyebrow kick" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Governança de investimentos imobiliários</p>
+      <h1 class="disp d1" data-hero-h>Protegemos o <span class="gr">capital</span> investido no seu projeto e obra.</h1>
       <p class="sub" data-reveal>Acompanhamos projeto e obra passo a passo, do planejamento à entrega das chaves. Independência total: trabalhamos por quem investe, nunca pela construtora.</p>
       <div class="actions" data-reveal>
-        <a class="btn" data-wa-btn="Hero" href="#contato"><span>Solicitar orçamento</span><span class="arw" aria-hidden="true">→</span></a>
-        <a class="btn ghost" href="#metodo"><span>Conhecer o método</span></a>
+        <a class="btn" data-wa-btn="Hero" href="#contato"><span>Solicitar orçamento</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></a>
+        <a class="btn ghost" href="#portfolio"><span>Ver o portfólio</span><span class="ln"></span></a>
       </div>
-      <div class="stat" data-reveal="soft">
-        <div class="n big"><span data-count="22.3" data-dec="1">22,3</span><span class="u">%</span></div>
-        <div class="cap">Eficiência financeira quando a HUP entra desde o início do investimento</div>
+      <div class="creds" data-reveal="soft">
+        <div class="c"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg><span><b>Independência total.</b> Atuamos por quem investe, não pela construtora.</span></div>
+        <div class="c"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg><span><b>18,1% a 22,3%</b> de eficiência quando entramos desde o início.</span></div>
+        <div class="c"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg><span><b>Rede curada</b> de 65 construtores e 18 escritórios de arquitetura.</span></div>
       </div>
-    </div>
-    <div class="right">
-      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero.webp" alt="Residência de alto padrão ao entardecer, obra acompanhada pela HUP" data-parallax="0.10" fetchpriority="high">
-      <div class="badge"><div class="k">Não somos construtora</div><div class="v">Atuamos em nome de quem investe</div></div>
     </div>
   </div>
 </section>
@@ -91,7 +92,7 @@
 <!-- ============ MANIFESTO ============ -->
 <section class="chapter manifesto" data-bg="light" id="posicionamento">
   <div class="container">
-    <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Posicionamento</p>
+    <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Posicionamento</p>
     <h2 class="disp d2 stmt" aria-label="Não somos construtora. Não somos arquitetura. Atuamos em nome de quem investe.">
       <span class="l">Não somos construtora.</span>
       <span class="l">Não somos arquitetura.</span>
@@ -108,7 +109,7 @@
 <section class="chapter pad-2" data-bg="light" id="metodo">
   <div class="container">
     <div class="head-row">
-      <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Método HUP</p>
+      <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Método HUP</p>
       <h2 class="disp d2" data-reveal="soft">Quatro pilares transformam complexidade em decisão.</h2>
       <p class="lede" data-reveal>O risco nasce antes do canteiro. O método organiza escopo, custo, prazo e qualidade para que desvios apareçam cedo, quando ainda custam pouco.</p>
     </div>
@@ -126,7 +127,7 @@
   <div class="media"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/break-fundacao.webp" alt="Fundação em execução com armação e controle técnico de campo" data-parallax="0.09"></div>
   <div class="veil" aria-hidden="true"></div>
   <div class="container inner">
-    <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Controle no canteiro</p>
+    <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Controle no canteiro</p>
     <h2 class="disp d3" data-reveal="soft">Desvios são identificados cedo, antes de virarem custo extra, atraso ou perda de qualidade.</h2>
     <p class="lede" data-reveal>Cada decisão de campo é confrontada com o orçamento e o objetivo final do investimento.</p>
   </div>
@@ -135,7 +136,7 @@
 <!-- ============ IMPACTO (escuro, big number) ============ -->
 <section class="chapter on-dark impact" data-bg="dark" id="impacto">
   <div class="container">
-    <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Impacto no capital</p>
+    <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Impacto no capital</p>
     <div class="row">
       <div class="figure big" data-reveal="soft"><span data-count="18.1" data-dec="1">18,1</span><span class="to">a</span><span data-count="22.3" data-dec="1">22,3</span><span class="pct">%</span></div>
       <div>
@@ -156,7 +157,7 @@
 <section class="chapter" data-bg="light" id="solucoes">
   <div class="container">
     <div class="head-row">
-      <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Portfólio de soluções</p>
+      <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Portfólio de soluções</p>
       <h2 class="disp d2" data-reveal="soft">Quatro soluções, uma lógica de controle.</h2>
     </div>
     <div class="services">
@@ -176,7 +177,7 @@
       <figcaption class="cap">A HUP organiza a entrega</figcaption>
     </figure>
     <div>
-      <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Governança compartilhada</p>
+      <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Governança compartilhada</p>
       <h2 class="disp d3" data-reveal="soft">Cada agente atua no seu melhor papel.</h2>
       <div class="steps-v" data-reveal>
         <div class="sv"><div class="who">Arquitetura</div><div><h4>Conceito e pré-executivo</h4><p>Programa, linguagem e diretrizes espaciais.</p></div></div>
@@ -193,7 +194,7 @@
 <section class="chapter" data-bg="light" id="casos">
   <div class="container">
     <div class="head-row">
-      <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Evidências de processo</p>
+      <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Evidências de processo</p>
       <h2 class="disp d2" data-reveal="soft">Decisões comparáveis geram resultados concretos.</h2>
     </div>
     <div class="cases" data-reveal="soft">
@@ -216,7 +217,7 @@
         <div class="ph"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/app-3.webp" alt="Aplicativo de gestão: fotos 360 e histórico da evolução física"></div>
       </div>
       <div>
-        <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Operação e controle</p>
+        <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Operação e controle</p>
         <h2 class="disp d3" data-reveal="soft">Tecnologia transforma campo em visibilidade.</h2>
         <div class="flist" data-reveal>
           <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M3 9h18M8 21h8M12 18v3"/></svg><div><h4>Pendências centralizadas</h4><p>Apontamentos e comunicação diária num só lugar, sem ruído entre canteiro e escritório.</p></div></div>
@@ -234,7 +235,7 @@
   <div class="pf-sticky" data-pf-sticky>
     <div class="pf-track" data-pf-track>
       <div class="pf-intro">
-        <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Portfólio</p>
+        <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Portfólio</p>
         <h2 class="disp d3" data-reveal="soft">Obras acompanhadas de ponta a ponta.</h2>
         <p class="lede" data-reveal style="margin-top:18px">Residencial, corporativo, retrofit e apartamentos para investimento. Método e controle em cada tipologia.</p>
       </div>
@@ -271,7 +272,7 @@
 <section class="chapter" data-bg="light" id="lideranca">
   <div class="container">
     <div class="head-row">
-      <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Liderança</p>
+      <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Liderança</p>
       <h2 class="disp d2" data-reveal="soft">Trajetórias que já protegeram capital em alta complexidade.</h2>
     </div>
     <div class="leaders">
@@ -294,12 +295,12 @@
 <section class="chapter on-dark cta" data-bg="dark" id="contato">
   <div class="container wrap">
     <div>
-      <p class="eyebrow" data-reveal="soft"><span class="rule"></span>Comece antes do canteiro</p>
+      <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Comece antes do canteiro</p>
       <h2 class="disp d2" data-reveal="soft">Seu próximo projeto começa antes do canteiro.</h2>
       <p class="lede" data-reveal>Traga o objetivo, o estágio e o budget. A HUP organiza a próxima decisão para que você foque no crescimento do seu patrimônio.</p>
       <div class="actions" data-reveal>
-        <a class="btn" data-wa-btn="CTA final" href="#contato"><span>Solicitar orçamento</span><span class="arw" aria-hidden="true">→</span></a>
-        <a class="btn ghost" href="https://www.hupxp.com" target="_blank" rel="noopener"><span>Visitar hupxp.com</span></a>
+        <a class="btn" data-wa-btn="CTA final" href="#contato"><span>Solicitar orçamento</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></a>
+        <a class="btn ghost" href="https://www.hupxp.com" target="_blank" rel="noopener"><span>Visitar hupxp.com</span><span class="ln"></span></a>
       </div>
     </div>
     <div class="steps" data-reveal="soft">
