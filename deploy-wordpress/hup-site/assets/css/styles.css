@@ -92,12 +92,13 @@ strong,.strong{font-weight:600;color:var(--ink)}
 /* variante sólida (pílula + detalhe de arco na curva direita) */
 .btn:not(.ghost){background:var(--forest);color:#fff;border-radius:999px;padding:15px 26px;min-height:54px;--bd:#0A3A30;
   transition:background .4s var(--e2),transform .18s var(--e2)}
-/* arco CONCÊNTRICO com a tampa direita da pílula, ~5px para fora, só na curva inferior-direita */
+/* arco CONCÊNTRICO com a tampa direita da pílula, ~5px para fora, só na curva direita
+   (apenas a borda direita colorida = quarto direito do anel; leve rotação p/ inclinar ao pé) */
 .btn:not(.ghost)::after{content:"";position:absolute;top:-5px;bottom:-5px;right:-5px;aspect-ratio:1;border-radius:50%;
-  border:2.5px solid var(--bd);border-top-color:transparent;border-left-color:transparent;
-  transition:top .4s var(--e),bottom .4s var(--e),right .4s var(--e);pointer-events:none}
+  border:2.5px solid transparent;border-right-color:var(--bd);transform:rotate(22deg);
+  transition:transform .4s var(--e);pointer-events:none}
 .btn:not(.ghost):hover{background:#12634F}
-.btn:not(.ghost):hover::after{top:-3px;bottom:-3px;right:-3px}
+.btn:not(.ghost):hover::after{transform:rotate(22deg) scale(.96)}
 .btn:not(.ghost):hover .arw{transform:translateX(4px)}
 /* variante clara (Frame 1): branco + chevron verde, arco sage */
 .btn.light,.hero .btn:not(.ghost),.on-dark .btn:not(.ghost){background:#fff;color:var(--forest);--bd:var(--sage-tint)}
