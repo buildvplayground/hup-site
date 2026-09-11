@@ -92,11 +92,12 @@ strong,.strong{font-weight:600;color:var(--ink)}
 /* variante sólida (pílula + detalhe de arco na curva direita) */
 .btn:not(.ghost){background:var(--forest);color:#fff;border-radius:999px;padding:15px 26px;min-height:54px;--bd:#0A3A30;
   transition:background .4s var(--e2),transform .18s var(--e2)}
-.btn:not(.ghost)::after{content:"";position:absolute;top:0;bottom:0;right:0;aspect-ratio:1;border-radius:50%;
+/* arco CONCÊNTRICO com a tampa direita da pílula, ~5px para fora, só na curva inferior-direita */
+.btn:not(.ghost)::after{content:"";position:absolute;top:-5px;bottom:-5px;right:-5px;aspect-ratio:1;border-radius:50%;
   border:2.5px solid var(--bd);border-top-color:transparent;border-left-color:transparent;
-  transform:translate(4px,4px);transition:transform .4s var(--e);pointer-events:none}
+  transition:top .4s var(--e),bottom .4s var(--e),right .4s var(--e);pointer-events:none}
 .btn:not(.ghost):hover{background:#12634F}
-.btn:not(.ghost):hover::after{transform:translate(2px,2px)}
+.btn:not(.ghost):hover::after{top:-3px;bottom:-3px;right:-3px}
 .btn:not(.ghost):hover .arw{transform:translateX(4px)}
 /* variante clara (Frame 1): branco + chevron verde, arco sage */
 .btn.light,.hero .btn:not(.ghost),.on-dark .btn:not(.ghost){background:#fff;color:var(--forest);--bd:var(--sage-tint)}
