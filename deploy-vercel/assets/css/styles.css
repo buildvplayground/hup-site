@@ -293,10 +293,11 @@ strong,.strong{font-weight:600;color:var(--ink)}
 /* ============================================================ PORTFÓLIO (cena horizontal) */
 .pf-scene{position:relative}
 .pf-sticky{position:relative;overflow:hidden;background:var(--paper-2)}
-.pf-track{display:flex;gap:clamp(16px,2vw,28px);align-items:center;height:100svh;padding:0 var(--pad);will-change:transform}
+.pf-track{display:flex;gap:clamp(16px,2vw,28px);align-items:flex-start;height:100svh;
+  padding:calc(var(--hpad) + clamp(30px,11vh,120px)) var(--pad) 0;will-change:transform}
 .pf-intro{flex:0 0 auto;width:min(82vw,460px);padding-right:24px}
 .pcard{flex:0 0 auto;width:clamp(280px,36vw,440px);text-align:left;background:none;border:0;padding:0;color:inherit;display:block}
-.pcard .cover{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--paper-3);border-radius:6px}
+.pcard .cover{display:block;position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--paper-3);border-radius:6px}
 .pcard .cover img{width:100%;height:100%;object-fit:cover;filter:var(--grade);transition:transform 1.2s var(--e)}
 .pcard:hover .cover img,.pcard:focus-visible .cover img{transform:scale(1.05)}
 .pcard .cover .idx{position:absolute;left:0;top:0;background:var(--paper);color:var(--forest);font-family:var(--disp);font-weight:600;font-size:1rem;padding:6px 12px}
@@ -305,7 +306,7 @@ strong,.strong{font-weight:600;color:var(--ink)}
 .pcard .meta{padding:13px 2px 4px;display:flex;flex-direction:column;gap:5px}
 .pcard .meta .city{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
 .pcard .meta h3{margin:0;font-family:var(--disp);font-weight:600;font-size:1.25rem}
-.pcard .meta .scope{color:var(--muted);font-size:.88rem}
+.pcard .meta .scope{color:var(--muted);font-size:.88rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pf-hint{position:absolute;right:var(--pad);bottom:24px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:8px;align-items:center}
 .pf-hint .ar{color:var(--green)}
 @media(max-width:900px){
