@@ -1,0 +1,15 @@
+/*
+Theme Name: HUP Governança
+Theme URI: https://www.hupxp.com/
+Author: BuildV
+Author URI: https://buildv.com.br/
+Description: Tema single-page da HUP Governança de Investimentos Imobiliários. HTML estático + CSS + JS vanilla empacotado como tema WordPress. O CSS real fica em assets/css/styles.css (carregado no header); este style.css existe apenas para o cabeçalho de tema exigido pelo WordPress.
+Version: 1.0.0
+Requires at least: 5.9
+Tested up to: 6.6
+Requires PHP: 7.4
+License: Proprietary
+Text Domain: hup-site
+*/
+
+/* Os estilos do site vivem em assets/css/styles.css. Não edite aqui. */

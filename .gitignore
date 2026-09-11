@@ -1,0 +1,28 @@
+# BuildV: o repositório versiona SÓ a pasta de deploy + estado.
+# Material-fonte fica local + Google Drive.
+
+# material bruto e intermediário
+_raw/
+imagens/
+Marca/
+Copys/
+brief-pack.md
+site antigo/
+
+# working / fontes (o entregável é deploy-vercel/ e deploy-wordpress/)
+Site/
+design-system/
+
+# sistema
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vercel/
+_painel/
+
+# segredos (nunca versionar)
+*.env
+.env*
+db-config.php
+!db-config.example.php

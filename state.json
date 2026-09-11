@@ -1,0 +1,51 @@
+{
+  "cliente": "hup",
+  "nome_exibicao": "HUP Governança de Investimentos Imobiliários",
+  "setor": "governanca-de-investimentos-imobiliarios-owners-representative-sp-rj",
+  "etapa_atual": 9,
+  "atualizado_em": "2026-09-11",
+  "etapas": [
+    { "n": 1, "nome": "extrair-drive", "status": "done" },
+    { "n": 2, "nome": "scaffold-projeto", "status": "done" },
+    { "n": 2.5, "nome": "repo-github", "status": "doing" },
+    { "n": 3, "nome": "design-system", "status": "done" },
+    { "n": 4, "nome": "extrair-copy", "status": "done" },
+    { "n": 5, "nome": "gerar-frontend", "status": "done" },
+    { "n": 6, "nome": "ajustes-imagens-responsivo", "status": "done" },
+    { "n": 7, "nome": "modulos-lgpd", "status": "done" },
+    { "n": 7.5, "nome": "instalar-tags", "status": "blocked" },
+    { "n": 8, "nome": "deploy-preparado", "status": "done" },
+    { "n": 9, "nome": "publicacao-producao", "status": "blocked" }
+  ],
+  "links": {
+    "drive": "https://drive.google.com/drive/folders/1FXxOEVn9BcvQHQ9YweJlzgPlbeVs0wbH",
+    "repo": "https://github.com/dev-buildv/hup-site",
+    "preview_local": "Site/index.html (servir a pasta) ou deploy-vercel/index.html",
+    "site_cliente": "https://www.hupxp.com",
+    "dominio": null
+  },
+  "marca": {
+    "whatsapp": "5511993353728",
+    "paleta": { "ink": "#08120F", "jade": "#3ED1B7", "jade_deep": "#2A8A79", "painel": "#1A2923", "texto": "#F3F7F5" },
+    "tipografia": ["Fraunces", "Hanken Grotesk", "IBM Plex Mono"]
+  },
+  "auditoria": {
+    "overflow_horizontal": "0px de 320 a 1920",
+    "erros_js": 0,
+    "reveal_ocultos_apos_scroll": 0,
+    "travessao_na_copy": 0,
+    "before_em_eyebrow": 0,
+    "imagens": "15 arquivos webp/png, ~1.6MB"
+  },
+  "pendencias": [
+    { "item": "WhatsApp comercial", "status": "resolvido", "obs": "5511993353728 do deck, ja configurado" },
+    { "item": "IDs de tag (GTM/GA4/Meta Pixel)", "status": "pendente", "acao": "cliente fornece os IDs; rodar instalar-tags" },
+    { "item": "Merlin (popup)", "status": "pendente", "acao": "so se o cliente quiser; precisa de ID" },
+    { "item": "Repositorio GitHub", "status": "verificar", "acao": "confirmar criacao dev-buildv/hup-site (privado)" },
+    { "item": "Deploy Vercel", "status": "pendente", "acao": "importar repo, Root Directory=deploy-vercel, Framework=Other" },
+    { "item": "Deploy WordPress", "status": "pendente", "acao": "zipar deploy-wordpress/hup-site e enviar como tema; criar Page Privacidade" },
+    { "item": "Dominio", "status": "pendente", "acao": "cliente define dominio/apontamento DNS" },
+    { "item": "Revisao estetica humana", "status": "pendente", "acao": "cliente revisa no preview e pede ajustes finais" },
+    { "item": "Fotos de portfolio", "status": "nota", "obs": "usadas as do deck; se houver acervo maior, ampliar galerias por obra" }
+  ]
+}
