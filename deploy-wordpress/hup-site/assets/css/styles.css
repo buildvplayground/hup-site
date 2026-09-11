@@ -89,16 +89,19 @@ strong,.strong{font-weight:600;color:var(--ink)}
   border:0;background:transparent;color:var(--ink);transition:transform .18s var(--e2)}
 .btn .arw{width:16px;height:16px;flex:none;stroke-width:2.3;transition:transform .4s var(--e)}
 .btn:active{transform:scale(.985)}
-/* variante sólida (pílula + eco via box-shadow sólido, sem blur) */
-.btn:not(.ghost){background:var(--forest);color:#fff;border-radius:999px;padding:15px 26px;min-height:54px;
-  box-shadow:13px 11px 0 0 #093A2F;
-  transition:background .4s var(--e2),box-shadow .42s var(--e),transform .18s var(--e2)}
-.btn:not(.ghost):hover{background:#12634F;box-shadow:7px 6px 0 0 #093A2F}
+/* variante sólida (pílula + detalhe de arco na curva direita) */
+.btn:not(.ghost){background:var(--forest);color:#fff;border-radius:999px;padding:15px 26px;min-height:54px;--bd:#0A3A30;
+  transition:background .4s var(--e2),transform .18s var(--e2)}
+.btn:not(.ghost)::after{content:"";position:absolute;top:0;bottom:0;right:0;aspect-ratio:1;border-radius:50%;
+  border:2.5px solid var(--bd);border-top-color:transparent;border-left-color:transparent;
+  transform:translate(4px,4px);transition:transform .4s var(--e);pointer-events:none}
+.btn:not(.ghost):hover{background:#12634F}
+.btn:not(.ghost):hover::after{transform:translate(2px,2px)}
 .btn:not(.ghost):hover .arw{transform:translateX(4px)}
-/* variante clara (Frame 1): branco + chevron verde, eco sage */
-.btn.light,.hero .btn:not(.ghost),.on-dark .btn:not(.ghost){background:#fff;color:var(--forest);box-shadow:13px 11px 0 0 var(--sage)}
+/* variante clara (Frame 1): branco + chevron verde, arco sage */
+.btn.light,.hero .btn:not(.ghost),.on-dark .btn:not(.ghost){background:#fff;color:var(--forest);--bd:var(--sage-tint)}
 .btn.light .arw,.hero .btn:not(.ghost) .arw,.on-dark .btn:not(.ghost) .arw{color:var(--forest)}
-.btn.light:hover,.hero .btn:not(.ghost):hover,.on-dark .btn:not(.ghost):hover{background:#EDF2EE;box-shadow:7px 6px 0 0 var(--sage)}
+.btn.light:hover,.hero .btn:not(.ghost):hover,.on-dark .btn:not(.ghost):hover{background:#EDF2EE}
 /* ghost = texto + sublinhado (secundário) */
 .btn.ghost{padding:15px 4px;min-height:48px}
 .btn.ghost .ln{position:absolute;left:4px;right:4px;bottom:9px;height:1px;background:var(--sage-tint);transform-origin:left;transition:transform .4s var(--e),background .4s}
