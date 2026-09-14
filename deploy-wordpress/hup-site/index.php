@@ -70,7 +70,7 @@
 <!-- ============ HERO (full-bleed, parallax) ============ -->
 <section class="hero-wrap" data-bg="dark">
   <div class="hero" data-parallax-scene>
-    <div class="media"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero.webp" alt="Residência de alto padrão ao entardecer, obra acompanhada pela HUP" data-parallax="0.09" fetchpriority="high"></div>
+    <div class="media"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/hero-v2.webp" alt="Residência de alto padrão ao entardecer, obra acompanhada pela HUP" data-parallax="0.09" fetchpriority="high"></div>
     <div class="veil" aria-hidden="true"></div>
     <div class="chev" aria-hidden="true"></div>
     <div class="container inner">
