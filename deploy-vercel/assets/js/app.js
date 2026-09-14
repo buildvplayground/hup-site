@@ -86,7 +86,13 @@
       if (el.dataset.done) return; el.dataset.done = '1';
       var dec = parseInt(el.getAttribute('data-dec') || '0', 10), target = parseFloat(el.getAttribute('data-count'));
       if (isNaN(target)) return;
-      if (!motionOn()) { el.textContent = fmt(target, dec); return; }
+      var finalStr = fmt(target, dec);
+      // trava a largura no valor final para o contador nao empurrar os elementos vizinhos
+      el.textContent = finalStr;
+      el.style.display = 'inline-block';
+      el.style.textAlign = 'right';
+      el.style.width = Math.ceil(el.getBoundingClientRect().width) + 'px';
+      if (!motionOn()) { el.textContent = finalStr; return; }
       var dur = 1500, t0 = null;
       function step(ts) { if (!t0) t0 = ts; var p = Math.min((ts - t0) / dur, 1); el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)), dec); if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target, dec); }
       requestAnimationFrame(step);
