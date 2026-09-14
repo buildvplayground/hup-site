@@ -17,6 +17,7 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<?php wp_body_open(); ?>
 <a href="#metodo" class="btn" style="position:absolute;left:-9999px;top:0;z-index:200" onfocus="this.style.left='12px';this.style.top='12px'" onblur="this.style.left='-9999px'">Pular para o conteúdo</a>
 <div class="progress" data-progress aria-hidden="true"></div>
 <div class="frame-tag" aria-hidden="true">Governança · Controle · SP / RJ</div>

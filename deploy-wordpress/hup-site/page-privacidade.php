@@ -15,6 +15,7 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<?php wp_body_open(); ?>
 <header class="site-header" data-solid="true" style="position:fixed">
   <div class="container bar">
     <a class="brand" href="<?php echo esc_url( home_url('/') ); ?>" aria-label="HUP, página inicial">
