@@ -187,6 +187,25 @@
     // recompute after fonts/images settle (track width changes)
     setTimeout(layoutPins, 400); addEventListener('load', layoutPins);
 
+    // ---------- portfolio filter (tipo de obra) ----------
+    (function () {
+      var fbar = document.querySelector('[data-pf-filter]');
+      if (!fbar || !pfTrack) return;
+      var cards = Array.prototype.slice.call(pfTrack.querySelectorAll('.pcard'));
+      fbar.addEventListener('click', function (ev) {
+        var b = ev.target.closest('.pf-f'); if (!b) return;
+        var f = b.getAttribute('data-filter');
+        fbar.querySelectorAll('.pf-f').forEach(function (x) {
+          var on = x === b; x.classList.toggle('is-active', on); x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        cards.forEach(function (c) {
+          c.classList.toggle('is-hidden', f !== 'all' && c.getAttribute('data-type') !== f);
+        });
+        layoutPins();
+        if (pinActive && pfScene) scrollTo(0, Math.max(0, pfScene.offsetTop));
+      });
+    })();
+
     // ---------- anchor smooth scroll ----------
     function headerH() { return header ? header.querySelector('.bar').offsetHeight + 8 : 76; }
     function smoothTo(yy) {

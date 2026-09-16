@@ -340,6 +340,11 @@ strong,.strong{font-weight:600;color:var(--ink)}
 .pcard .meta .scope{color:var(--muted);font-size:.88rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pf-hint{position:absolute;right:var(--pad);bottom:24px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:8px;align-items:center}
 .pf-hint .ar{color:var(--green)}
+.pf-filter{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pf-f{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:var(--sage-soft);border:1px solid transparent;padding:8px 15px;border-radius:100px;transition:background .3s,color .3s,border-color .3s}
+.pf-f:hover{border-color:var(--line-2)}
+.pf-f.is-active{background:var(--forest);color:#fff;border-color:var(--forest)}
+.pcard.is-hidden{display:none}
 @media(max-width:900px){
   .pf-scene{min-height:auto;padding:var(--sec) 0}
   .pf-sticky{overflow:visible;background:transparent}
