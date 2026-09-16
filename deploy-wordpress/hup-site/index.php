@@ -234,8 +234,7 @@
 <!-- ============ PORTFÓLIO (cena horizontal travada) ============ -->
 <section class="pf-scene" data-bg="light" id="portfolio" data-pin="off" data-pf-scene>
   <div class="pf-sticky" data-pf-sticky>
-    <div class="pf-track" data-pf-track>
-      <div class="pf-intro">
+    <div class="pf-intro">
         <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Portfólio</p>
         <h2 class="disp d3" data-reveal="soft">Obras acompanhadas de ponta a ponta.</h2>
         <p class="lede" data-reveal style="margin-top:18px">Residencial, corporativo, retrofit e apartamentos para investimento. Método e controle em cada tipologia.</p>
@@ -245,7 +244,8 @@
           <button type="button" class="pf-f" data-filter="residencia" aria-pressed="false">Residência</button>
           <button type="button" class="pf-f" data-filter="apartamento" aria-pressed="false">Apartamento</button>
         </div>
-      </div>
+    </div>
+    <div class="pf-track" data-pf-track>
       <button class="pcard" data-type="residencia" data-gallery="assets/img/portfolio/residencial-serra.webp" data-title="Casa de campo · condomínio fechado" data-city="Interior de São Paulo">
         <span class="cover"><span class="idx">01</span><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/portfolio/residencial-serra.webp" alt="Residência de campo em condomínio de alto padrão"><span class="zoom" aria-hidden="true">+</span></span>
         <span class="meta"><span class="city">Residencial · casas</span><h3>Casa de campo</h3><span class="scope">Viabilidade, concorrência e gestão</span></span>
@@ -272,6 +272,7 @@
       </button>
       <div class="pf-end" aria-hidden="true"></div>
     </div>
+    <div class="pf-fade" aria-hidden="true"></div>
     <div class="pf-hint" aria-hidden="true">Arraste ou role <span class="ar">→</span></div>
   </div>
 </section>
