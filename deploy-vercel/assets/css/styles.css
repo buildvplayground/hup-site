@@ -345,6 +345,8 @@ strong,.strong{font-weight:600;color:var(--ink)}
 .pf-f:hover{border-color:var(--line-2)}
 .pf-f.is-active{background:var(--forest);color:#fff;border-color:var(--forest)}
 .pcard.is-hidden{display:none}
+.pf-end{flex:0 0 clamp(24px,5vw,80px);align-self:stretch}
+@media(max-width:900px){.pf-end{display:none}}
 @media(max-width:900px){
   .pf-scene{min-height:auto;padding:var(--sec) 0}
   .pf-sticky{overflow:visible;background:transparent}

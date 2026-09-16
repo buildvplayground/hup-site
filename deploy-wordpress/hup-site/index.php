@@ -270,6 +270,7 @@
         <span class="cover"><span class="idx">06</span><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/portfolio/shortstay.webp" alt="Studio para investimento pronto para operar e gerar renda"><span class="zoom" aria-hidden="true">+</span></span>
         <span class="meta"><span class="city">Apartamentos para renda</span><h3>Short stay</h3><span class="scope">Da chave à unidade pronta para operar</span></span>
       </button>
+      <div class="pf-end" aria-hidden="true"></div>
     </div>
     <div class="pf-hint" aria-hidden="true">Arraste ou role <span class="ar">→</span></div>
   </div>
