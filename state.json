@@ -2,6 +2,26 @@
   "cliente": "hup",
   "nome_exibicao": "HUP Governança de Investimentos Imobiliários",
   "setor": "governanca-de-investimentos-imobiliarios-owners-representative-sp-rj",
+  "metodo_conversao": "widget-crm",
+  "lp_gestao_de_obras": {
+    "slug": "/gestao-de-obras",
+    "arquivos": ["deploy-vercel/gestao-de-obras/index.html", "deploy-vercel/assets/css/gestao-de-obras.css", "deploy-vercel/assets/js/gestao-de-obras.js", "deploy-vercel/assets/og/gestao-de-obras.jpg"],
+    "copy": "HUP-copy-landing-page-gestao-de-obras.md (Cauan Quintino, 29/10/2026), 1:1",
+    "montada_em": "2026-10-29",
+    "imagens_ia": "hero e diagnostico gerados no Codex em 29/10/2026 (2752x1536 + versao celular 1536x2752); ilustrativas, nao sao obras da HUP; PNGs originais em imagens/geradas (local), prompts em imagens/_prompts",
+    "gates": "verificar ok · 0 overflow 320-1440 · anti-generico ok (1 grade de cards) · copy 93/93 por medicao",
+    "pendencias": [
+      "Base da media 18% a 22%: numero de obras e periodo (a frase saiu sem o complemento)",
+      "Numero atual de obras em andamento (14 no hero e na faixa)",
+      "Validar 'honorarios se pagam na concorrencia' (esta na pagina)",
+      "Autorizacao para citar fundo (R$ 52 mi) e clinica (R$ 157 mil) (estao na pagina)",
+      "Confirmar sem comissao de fornecedor, multa por atraso, cidades e obra ja iniciada (FAQ)",
+      "E-mail para fornecedores e curriculos (linha escondida em Para quem e)",
+      "Perguntas de qualificacao do formulario da copy (tipo de obra, cidade, investimento, fase) vao para a config do widget no painel do CRM",
+      "Prova de prazo (coluna previsto x entregue), se o Ivan tiver os dados",
+      "Dominio final: canonical e og apontam para hup-site.vercel.app"
+    ]
+  },
   "etapa_atual": 9,
   "atualizado_em": "2026-09-11",
   "etapas": [
