@@ -164,11 +164,22 @@
       }
       return null;
     }
+    // Formulário incorporado na seção final: os botões levam até ele e põem o foco no primeiro campo.
+    function goToForm(slot) {
+      slot.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      setTimeout(function () {
+        var host = slot.querySelector('*');
+        var field = host && host.shadowRoot && host.shadowRoot.querySelector('input:not([name=company_website]),textarea,select');
+        if (field) field.focus({ preventScroll: true });
+      }, reduce ? 0 : 700);
+    }
     document.addEventListener('click', function (e) {
       var t = e.target.closest('[data-cta]'); if (!t) return;
       e.preventDefault();
       (window.dataLayer = window.dataLayer || []).push({ event: 'cta_click', cta_local: t.getAttribute('data-cta') || 'cta' });
       closeDrawer();
+      var slot = document.querySelector('[data-buildv-widget]');
+      if (slot) { goToForm(slot); return; }
       var tries = 0;
       (function open() {
         var l = findLauncher();

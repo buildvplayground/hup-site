@@ -276,11 +276,20 @@ html[data-motion="on"] .in-view .lp-case:nth-child(4) .lp-bar__gap{transition-de
 .lp-final h2{margin:0;max-width:18ch;color:var(--white)}
 .lp-final .lede{margin-top:22px;max-width:50ch;color:var(--on-dark)}
 .lp-final .eyebrow,.lp-final .eyebrow .cv{color:var(--jade)}
+/* Texto à esquerda, formulário do CRM à direita (no celular, empilha) */
+.lp-final__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,400px);gap:clamp(32px,5vw,72px);align-items:center}
+.lp-final__copy{min-width:0}
+.lp-final__form{min-width:0;min-height:300px}
+@media(max-width:900px){
+  .lp-final__grid{grid-template-columns:1fr;gap:28px}
+  .lp-final__form{min-height:280px}
+}
 /* celular: a casa aparece no alto, o texto desce para a parte escura */
 @media(max-width:760px){
   .lp-final{align-items:flex-end;min-height:100svh}
   .lp-final__inner{padding-bottom:clamp(48px,12vw,64px)}
-  .lp-final__veil{background:linear-gradient(180deg,color-mix(in srgb,var(--ink) 30%,transparent) 0%,color-mix(in srgb,var(--ink) 18%,transparent) 30%,color-mix(in srgb,var(--ink) 78%,transparent) 52%,color-mix(in srgb,var(--ink) 94%,transparent) 70%)}
+  /* com o formulário, o texto sobe: o escuro começa antes para manter a leitura */
+  .lp-final__veil{background:linear-gradient(180deg,color-mix(in srgb,var(--ink) 30%,transparent) 0%,color-mix(in srgb,var(--ink) 22%,transparent) 14%,color-mix(in srgb,var(--ink) 82%,transparent) 30%,color-mix(in srgb,var(--ink) 94%,transparent) 44%)}
 }
 
 /* ============================================================ FOOTER */
