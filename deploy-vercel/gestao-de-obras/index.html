@@ -347,11 +347,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </picture></div>
   <div class="lp-final__veil" aria-hidden="true"></div>
   <div class="container lp-final__inner">
-    <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Diagnóstico da obra</p>
-    <h2 class="disp d2" data-reveal="soft">Antes de assinar com qualquer fornecedor, fale com a&nbsp;HUP</h2>
-    <p class="lede" data-reveal>No diagnóstico, analisamos o seu orçamento atual e mostramos onde dá para negociar. Sem custo e sem compromisso.</p>
-    <div class="lp-actions" data-reveal>
-      <button type="button" class="btn light" data-cta="final"><span>Agendar diagnóstico da minha obra</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></button>
+    <div class="lp-final__grid">
+      <div class="lp-final__copy">
+        <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Diagnóstico da obra</p>
+        <h2 class="disp d2" data-reveal="soft">Antes de assinar com qualquer fornecedor, fale com a&nbsp;HUP</h2>
+        <p class="lede" data-reveal>No diagnóstico, analisamos o seu orçamento atual e mostramos onde dá para negociar. Sem custo e sem compromisso.</p>
+      </div>
+      <!-- Formulário do CRM BuildV (incorporado). A classe "cta" faz o mapa de calor contar esta área como chamada. -->
+      <div class="lp-final__form cta" id="formulario">
+        <div data-buildv-widget="wid_4eb90ab9a7dda8d7fa1d7a1045275c88"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -385,11 +390,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- Widget CRM BuildV (método de conversão do projeto) -->
-<script src="https://app-crm.buildv.com.br/widget.js"
-        data-widget="wid_16cac8b82d895d985eed13d246226f88"
-        data-api="https://buildv-crm-clients-api-production.up.railway.app"
-        async></script>
+<!-- Widget CRM BuildV (método de conversão do projeto): formulário incorporado na seção final (#formulario).
+     Os botões [data-cta] da página levam até ele. -->
+<script src="https://app-crm.buildv.com.br/widget.js" data-widget="wid_4eb90ab9a7dda8d7fa1d7a1045275c88" data-api="https://crm-clients-api.buildv.com.br" async></script>
         <!-- Mapa de calor do Painel BuildV: sem cookie e sem dado pessoal -->
         <script src="https://painel-web-ebon.vercel.app/m.js" defer></script>
 </body>
