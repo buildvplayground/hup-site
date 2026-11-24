@@ -173,6 +173,11 @@
         if (field) field.focus({ preventScroll: true });
       }, reduce ? 0 : 700);
     }
+    // Quem chega com #formulario (ex.: botões da página inicial) vai até o formulário quando ele já montou
+    if (location.hash === '#formulario') {
+      var alvo = document.querySelector('[data-buildv-widget]');
+      if (alvo) setTimeout(function () { goToForm(alvo); }, 600);
+    }
     document.addEventListener('click', function (e) {
       var t = e.target.closest('[data-cta]'); if (!t) return;
       e.preventDefault();

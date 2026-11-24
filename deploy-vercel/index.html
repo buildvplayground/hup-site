@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#portfolio"><span class="no">04</span>Portfólio<span class="u"></span></a>
       <a href="#lideranca"><span class="no">05</span>Liderança<span class="u"></span></a>
     </nav>
-    <button type="button" class="btn header-cta" data-cta style="padding:11px 22px"><span>Falar com a HUP</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></button>
+    <button type="button" class="btn header-cta" data-cta style="padding:11px 22px"><span>Solicitar orçamento</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></button>
     <button class="burger" aria-label="Abrir menu" aria-expanded="false" data-burger><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -67,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#contato" data-drawer-link><span class="no">06</span>Contato</a>
     </nav>
     <div class="d-foot">
-      <button type="button" class="btn" data-cta><span>Falar com a HUP</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></button>
+      <button type="button" class="btn" data-cta><span>Solicitar orçamento</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></button>
       <div class="contact">+55 11 99335&#8209;3728<br>www.hupxp.com<br>@hupgestao</div>
     </div>
   </div>
@@ -315,8 +315,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="eyebrow" data-reveal="soft"><svg class="cv" viewBox="0 0 13 9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 8 6.5 2 12 8"/></svg>Comece antes do canteiro</p>
       <h2 class="disp d2" data-reveal="soft">Seu próximo projeto começa antes do canteiro.</h2>
       <p class="lede" data-reveal>Traga o objetivo, o estágio e o budget. A HUP organiza a próxima decisão para que você foque no crescimento do seu patrimônio.</p>
+      <!-- Formulário do CRM BuildV (incorporado). A classe "cta" faz o mapa de calor contar esta área como chamada. -->
+      <div class="cta-form cta" id="formulario">
+        <div data-buildv-widget="wid_f38896c081591265e66d08aaffd3363b"></div>
+      </div>
       <div class="actions" data-reveal>
-        <button type="button" class="btn" data-cta><span>Solicitar orçamento</span><svg class="arw" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3.5 1.5 8 6l-4.5 4.5"/></svg></button>
         <a class="btn ghost" href="https://www.hupxp.com" target="_blank" rel="noopener"><span>Visitar hupxp.com</span><span class="ln"></span></a>
       </div>
     </div>
@@ -376,29 +379,31 @@ setTimeout(function(){if(!window.__hupReady){document.documentElement.setAttribu
 </script>
 <script src="assets/js/app.js"></script>
 
-<!-- Widget CRM BuildV -->
-<script src="https://app-crm.buildv.com.br/widget.js"
-        data-widget="wid_16cac8b82d895d985eed13d246226f88"
-        data-api="https://buildv-crm-clients-api-production.up.railway.app"
-        async></script>
+<!-- Widget CRM BuildV: formulário incorporado na seção de contato (#formulario) -->
+<style>
+  .cta .cta-form{margin-top:28px;width:100%;max-width:420px;min-height:300px}
+</style>
+<script src="https://app-crm.buildv.com.br/widget.js" data-widget="wid_f38896c081591265e66d08aaffd3363b" data-api="https://crm-clients-api.buildv.com.br" async></script>
 <script>
-  /* CTAs (data-cta) abrem o popup do widget BuildV CRM — o .bv-launcher vive em shadow DOM */
+  /* Botões [data-cta] levam até o formulário e põem o foco no primeiro campo */
   (function(){
-    function findLauncher(){
-      var l = document.querySelector('.bv-launcher'); if (l) return l;
-      var hosts = document.querySelectorAll('*');
-      for (var i=0;i<hosts.length;i++){
-        if (hosts[i].shadowRoot){
-          var x = hosts[i].shadowRoot.querySelector('.bv-launcher');
-          if (x) return x;
-        }
-      }
-      return null;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function goToForm(){
+      var slot = document.querySelector('[data-buildv-widget]'); if (!slot) return;
+      slot.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+      setTimeout(function(){
+        var host = slot.querySelector('*');
+        var field = host && host.shadowRoot && host.shadowRoot.querySelector('input:not([name=company_website]),textarea,select');
+        if (field) field.focus({ preventScroll: true });
+      }, reduce ? 0 : 700);
     }
     document.addEventListener('click', function(e){
       var t = e.target.closest('[data-cta]'); if (!t) return;
       e.preventDefault();
-      var l = findLauncher(); if (l) l.click();
+      (window.dataLayer = window.dataLayer || []).push({ event: 'cta_click', cta_local: t.getAttribute('data-cta') || 'raiz' });
+      var aberto = document.querySelector('[data-drawer].open');
+      var fecha = aberto && aberto.querySelector('[data-drawer-close]');
+      if (fecha) { fecha.click(); setTimeout(goToForm, 80); } else { goToForm(); }
     });
   })();
 </script>
